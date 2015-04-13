@@ -2,7 +2,7 @@
 #
 # VERSION               0.0.1
 
-FROM      ubuntu:latest
+FROM      ubuntu:12.04.5
 
 MAINTAINER Gen Takahashi <gendosu@gmail.com>
 
