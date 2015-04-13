@@ -2,13 +2,15 @@
 #
 # VERSION               0.0.1
 
-FROM      ubuntu:latest
+FROM      ubuntu:13.10
 
 MAINTAINER Gen Takahashi <gendosu@gmail.com>
 
+RUN sed -i".back" -e 's/\/\/archive.ubuntu.com/\/\/old-releases.ubuntu.com/g' /etc/apt/sources.list
+
 RUN apt-get update \
 &&  apt-get upgrade -y --force-yes \
-&& apt-get install -y --force-yes \
+&&  apt-get install -y --force-yes \
   libssl-dev \
   libreadline-dev \
   zlib1g-dev \
