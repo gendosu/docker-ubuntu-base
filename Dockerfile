@@ -7,6 +7,9 @@ FROM      ubuntu:latest
 MAINTAINER Gen Takahashi <gendosu@gmail.com>
 
 RUN apt-get update && apt-get install -y --force-yes \
+  libssl-dev \
+  libreadline-dev \
+  zlib1g-dev \
   language-pack-ja \
   wget \
   curl \
