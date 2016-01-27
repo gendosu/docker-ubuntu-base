@@ -15,7 +15,9 @@ RUN apt-get update && apt-get install -y --force-yes \
   curl \
   git \
   build-essential \
-  vim
+  vim \
+&& apt-get clean \
+&& rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 
 # defaultのlocaleをja_JP.UTF-8にする
 ENV LANG=ja_JP.UTF-8
