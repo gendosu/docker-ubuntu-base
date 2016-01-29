@@ -25,5 +25,5 @@ RUN update-locale LANG=ja_JP.UTF-8
 
 # Timezone変更
 RUN echo "Asia/Tokyo" > /etc/timezone
-RUN dpkg-reconfigure -f noninteractive tzdata
+&&  dpkg-reconfigure -f noninteractive tzdata
 
