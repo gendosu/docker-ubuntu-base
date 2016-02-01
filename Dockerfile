@@ -6,7 +6,9 @@ FROM      ubuntu:latest
 
 MAINTAINER Gen Takahashi <gendosu@gmail.com>
 
-RUN apt-get update && apt-get install -y --force-yes \
+RUN apt-get update \
+&&  apt-get upgrade -y --force-yes \
+&& apt-get install -y --force-yes \
   libssl-dev \
   libreadline-dev \
   zlib1g-dev \
@@ -24,6 +26,6 @@ ENV LANG=ja_JP.UTF-8
 RUN update-locale LANG=ja_JP.UTF-8
 
 # Timezone変更
-RUN echo "Asia/Tokyo" > /etc/timezone
+RUN echo "Asia/Tokyo" > /etc/timezone \
 &&  dpkg-reconfigure -f noninteractive tzdata
 
