@@ -26,6 +26,6 @@ ENV LANG=ja_JP.UTF-8
 RUN update-locale LANG=ja_JP.UTF-8
 
 # Timezone変更
-RUN echo "Asia/Tokyo" > /etc/timezone \
+RUN cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime \
 &&  dpkg-reconfigure -f noninteractive tzdata
 
