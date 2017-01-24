@@ -2,24 +2,24 @@
 #
 # VERSION               0.0.1
 
-FROM      ubuntu:16.10
+FROM      ubuntu:17.04
 
 MAINTAINER Gen Takahashi <gendosu@gmail.com>
 
 RUN apt-get update \
 &&  apt-get upgrade -y --force-yes \
-&& apt-get install -y --force-yes \
-  libssl-dev \
-  libreadline-dev \
-  zlib1g-dev \
-  language-pack-ja \
-  wget \
-  curl \
-  git \
-  build-essential \
-  vim \
-&& apt-get clean \
-&& rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
+&&  apt-get install -y --force-yes \
+    libssl-dev \
+    libreadline-dev \
+    zlib1g-dev \
+    language-pack-ja \
+    wget \
+    curl \
+    git \
+    build-essential \
+    vim \
+&&  apt-get clean \
+&&  rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 
 # defaultのlocaleをja_JP.UTF-8にする
 ENV LANG=ja_JP.UTF-8
