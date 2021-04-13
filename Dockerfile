@@ -18,6 +18,7 @@ RUN apt-get update \
   git \
   build-essential \
   vim \
+  tzdata \
   && apt-get clean \
   && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 
