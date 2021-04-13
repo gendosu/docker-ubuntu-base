@@ -2,7 +2,7 @@
 #
 # VERSION               0.0.1
 
-FROM      ubuntu:20.04.1
+FROM      ubuntu:20.04
 
 MAINTAINER Gen Takahashi <gendosu@gmail.com>
 
