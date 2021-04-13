@@ -6,6 +6,8 @@ FROM      ubuntu:20.04
 
 MAINTAINER Gen Takahashi <gendosu@gmail.com>
 
+ENV DEBIAN_FRONTEND=noninteractive
+
 RUN apt-get update \
   &&  apt-get upgrade -y --force-yes \
   && apt-get install -y --force-yes \
